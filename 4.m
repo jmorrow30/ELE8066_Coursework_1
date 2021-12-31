@@ -26,7 +26,7 @@ sys_ss1=ss(sys1);
 
 y1=lsim(sys1,u,t);
 u_loop=u_loop+1;
-A_new=[[-1818.1 -935.3];[-352.5 -2422.5]];
+A_new=[[-1818.1 -935.3];[-352.5 -2422.5]];    %A_new is for closed loop
 [num,den]=ss2tf(A_new,B,C,D,1);
 sys2=tf(num,den);
 sys_ss2=ss(sys2);
