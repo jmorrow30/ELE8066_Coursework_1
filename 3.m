@@ -23,4 +23,3 @@ sys_ss=ss(sys)
 t=0:0.00001:10;
 figure
 step(sys_ss)
-
