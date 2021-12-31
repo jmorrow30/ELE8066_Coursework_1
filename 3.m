@@ -23,3 +23,19 @@ sys_ss=ss(sys)
 t=0:0.00001:10;
 figure
 step(sys_ss)
+
+ts=10  %10us
+N=0;
+y=1;
+y_=[];
+x_=[];
+while N<500
+x=(N*ts);
+y=(((eye(2))+A*ts)*x)+B*ts*0.5;
+N=N+1;
+y_norm=norm(y);
+y_=[y_,y_norm];
+x_=[x_,x];
+end
+figure
+plot(y_,x_)
